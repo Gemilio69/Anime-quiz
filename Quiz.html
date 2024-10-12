@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff5f6d, #ffc371);
+            transition: background 0.5s ease;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .quiz-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .quiz-card:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Anime Quiz</h1>
+    </header>
+    <main>
+        <!-- Dragon Ball -->
+        <div class="quiz-card" onclick="startQuiz('dragon-ball')" style="background-image: url('https://th.bing.com/th/id/OIP.OzigrxLdHtg9csaJ8DLgPAHaEc?rs=1&pid=ImgDetMain');">
+            <h2>Dragon Ball</h2>
+        </div>
+        <!-- Naruto -->
+        <div class="quiz-card" onclick="startQuiz('naruto')" style="background-image: url('https://i.pinimg.com/originals/c9/01/0e/c9010eb7291f46b6f112f1a735326ce5.jpg');">
+            <h2>Naruto</h2>
+        </div>
+        <!-- Bleach -->
+        <div class="quiz-card" onclick="startQuiz('bleach')" style="background-image: url('https://th.bing.com/th/id/OIP.3yVUmEbLzhYid-afeCTMqgHaD2?rs=1&pid=ImgDetMain');">
+            <h2>Bleach</h2>
+        </div>
+        <!-- One Piece -->
+        <div class="quiz-card" onclick="startQuiz('one-piece')" style="background-image: url('https://www.overgame.com/wp-content/uploads/2022/12/piece1-768x432.jpg');">
+            <h2>One Piece</h2>
+        </div>
+        <!-- Demon Slayer -->
+        <div class="quiz-card" onclick="startQuiz('demon-slayer')" style="background-image: url('https://th.bing.com/th/id/R.53f3cd4205983e1943559bb6cb7c19f5?rik=ff%2bAnmF7Y2GUpg&riu=http%3a%2f%2fpm1.aminoapps.com%2f9015%2f345e20e09e749d2343833404895ecc0e3eb08010r1-1560-880v2_uhq.jpg&ehk=tlIQawOU2dbwsTQ6%2bnIGnjAP5YVEEebEh3A1HOR4U3o%3d&risl=&pid=ImgRaw&r=0');">
+            <h2>Demon Slayer</h2>
+        </div>
+        <!-- Jojo's Bizarre Adventure -->
+        <div class="quiz-card" onclick="startQuiz('jojo')" style="background-image: url('https://th.bing.com/th/id/OIP.V2Svg2zBghj-FfR4znlZIwAAAA?rs=1&pid=ImgDetMain');">
+            <h2>Jojo's Bizarre Adventure</h2>
+        </div>
+        <!-- Death Note -->
+        <div class="quiz-card" onclick="startQuiz('death-note')" style="background-image: url('https://i.pinimg.com/originals/81/8a/0f/818a0feae182d91442653499bab42f44.jpg');">
+            <h2>Death Note</h2>
+        </div>
+        <!-- Fruit Basket -->
+        <div class="quiz-card" onclick="startQuiz('fruit-basket')" style="background-image: url('https://th.bing.com/th/id/OIP.fMAtTtlWZFEHUw-7to0IewHaEK?w=600&h=337&rs=1&pid=ImgDetMain');">
+            <h2>Fruit Basket</h2>
+        </div>
+        <!-- Jujutsu Kaisen -->
+        <div class="quiz-card" onclick="startQuiz('jujutsu-kaisen')" style="background-image: url('https://th.bing.com/th/id/OIP.L1BhMzZ46azt0SDAZrjniQHaD5?rs=1&pid=ImgDetMain');">
+            <h2>Jujutsu Kaisen</h2>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Anime Quiz</p>
+    </footer>
+
+    <script>
+        function startQuiz(quizId) {
+            alert('Début du quiz ' + quizId + '!');
+            // Change le dégradé de couleur en fonction du quiz
+            const colors = {
+                'dragon-ball': 'linear-gradient(to right, #ff5f6d, #ffc371)',
+                'naruto': 'linear-gradient(to right, #ffcc33, #ff6600)',
+                'bleach': 'linear-gradient(to right, #00c6ff, #0072ff)',
+                'one-piece': 'linear-gradient(to right, #f6d365, #fda085)',
+                'demon-slayer': 'linear-gradient(to right, #bdc3c7, #2c3e50)',
+                'jojo': 'linear-gradient(to right, #fc4a1a, #f7b733)',
+                'death-note': 'linear-gradient(to right, #232526, #414345)',
+                'fruit-basket': 'linear-gradient(to right, #ff9966, #ff5e62)',
+                'jujutsu-kaisen': 'linear-gradient(to right, #56ab2f, #a8e063)'
+            };
+            document.body.style.background = colors[quizId] || 'linear-gradient(to right, #ff5f6d, #ffc371)';
+        }
+    </script>
+</body>
+</html>
